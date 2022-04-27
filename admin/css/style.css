@@ -1,0 +1,584 @@
+/* -------------------- Framework -----------------*/
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ * {
+     font-size: 14px;
+ }
+.overflow-x {
+    overflow-x: auto;
+}
+.front-form{
+    display: none;
+}
+textarea{
+    background-color: #fff;
+}
+.space-between {
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.space-around {
+    width: 100% ;
+    display: flex;
+    justify-content: space-around ;
+    flex-wrap: wrap;
+}
+
+table td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.btn-circle{
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    text-align: center;
+    border-radius: 50% !important ;
+    border-color: #28a745 ;
+}
+.child-table td{
+    padding: 0px 0.1rem  !important;
+    border-top: 0 !important;
+}
+.child-table input[type="text"]{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+.child-table tr{
+   background-color: transparent !important;
+}
+/* --------------------theme -----------------*/
+.theme{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+a{
+    font-size: 14px;
+    display: block;
+}
+.error-success{
+    position: fixed ;
+    z-index: 5;
+    width: 100%;
+}
+/* -------------------- Sidebar -----------------*/
+.sidebar-toggle{
+    position: fixed;
+    z-index: 105 ;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+.sidebar{
+    width: 0%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
+}
+
+.sidebar-container{
+    position: relative;
+    padding: 40px 0px;
+}
+.user{
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+.user-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.user-img img{
+    width: 80px;
+    height: 80px;
+}
+.user-name{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.list-group-item{
+    background-color: transparent !important;
+} 
+.sidebar a{
+    color: #f8f9fa !important;
+}
+/* -------------------- Dropdown -----------------*/
+.dropdown{
+    position: relative;
+    transition: 0.5s;
+}
+.dropdown .dropdown-content{
+    max-height: 0px;
+    display: flex;
+    padding-left: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* -------------------- Main Content -----------------*/
+.main-content{
+    width: 100%;
+    transition: 0.5s;
+    position: relative;
+    background-color: #e5e6eb0f;
+    position: relative;
+}
+.separator{
+    width: 100%;
+    height: 2px ;
+    background-color: rgb(228, 121, 121);
+    margin-bottom: 1.2rem;
+}
+.user-options{
+    padding: 0;
+    margin : 0
+}
+.user-options-list{
+    list-style: none;
+    display: flex;
+}
+
+.user-option{
+    margin:0px 6px
+}
+.user-option a{
+    padding: 5px;
+}
+.user-option form button{
+    background-color: transparent;
+    border: transparent;
+    font-size: 17px;
+    padding: 5px
+
+}
+/* -------------------- Dashboard -----------------*/
+.subject-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.subject-card{
+    flex-basis: 30%;
+    height: 150px;
+    margin: 10px 20px;
+    position: relative;
+    box-shadow: 0px 0px 4px #111;
+}
+.subject-card-0{
+    flex-basis: 30%;
+    height: 150px;
+    margin: 10px 20px;
+    position: relative;
+}
+.subject-card a{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.subject-card a img{
+    display: block;
+    width: 100%;
+    height: 73%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+.subject-card a p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    text-align: center;
+}
+/* -------------------- Modal -----------------*/
+
+.modal{
+    position: fixed;
+    top: 0%;
+    left: 0;
+    padding-top: 4%;
+    transform: scale(0);
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+.modal-content{
+    padding: 30px;
+    border-radius: 4px;
+    width: 90%;
+    box-shadow: 0px 0px 20px #114;
+    background-color: #fff;
+}
+.close-btn{
+    display: block;
+    border: 0px;
+    color: red;
+    text-align: center;
+    position: absolute ;
+    right: 20px ;
+    top: 20px;
+}
+/* -------------------- Permission -----------------*/
+
+.permission{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15%;
+    transform: scale(0);
+    z-index: 12;
+    transition: 0.5s ;
+
+}
+.permission-content{
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 5px #114;
+}
+.permission .options{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+/* --------------------  -----------------*/
+
+.add  h4{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px #000 solid;
+    color: #111;
+    font-size: 20px ;
+    font-weight: 300;
+}
+
+/* ------------------- Test ----------------- */
+.card .image{
+    position: relative;
+    height: 100%;
+
+}
+.card .image img{
+    width: 100%;
+    height: 100%;
+}
+.test .row {
+    margin: unset;
+}
+/* ------------------- profile ----------------- */
+.personal-info{
+    border : 1px silver solid ;
+    padding : 10px 15px ;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: 0.5s;
+    width: 100%;
+}
+.personal-info:hover{
+    background-color: green;
+}
+.personal-info:hover {
+    color: #fff;
+}
+.personal-info .line{
+    display: flex;
+    justify-content: space-between;
+}
+.personal-info .image {
+    margin-bottom: 30px;
+}
+.personal-info img{
+    width: 100%;
+    height: 100%;
+}
+.schedules tr td , .schedules tr th{
+    text-align: center;
+}
+.absence {
+    width: 100%;
+}
+
+/* ------------------- Test ----------------- */
+.exam-card{
+    position: relative;
+    overflow: hidden;
+    padding: 0px !important;
+}
+.exam-card .pile{
+    transform: scale(1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(8, 8, 8,0.2);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exam-card .face{
+    cursor: pointer;
+    position: relative; 
+}
+.exam-card .face .image{ 
+    width: 100%;
+    height: 13rem;
+    position: relative; 
+}
+.exam-card .face .image img{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.exam-card:hover .pile{
+    transform: scale(01);
+}
+/*---------------- Mini Sidebar Page --------------*/
+
+.right-sidebar{
+    width: 100%;
+}
+
+.right-sidebar .popup-modal{
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    transition: 0.5s ;
+    z-index: 100;
+    padding: 5px;
+    text-align: center;
+    border: 1px grey solid;
+    outline: none;
+    border-radius: 3px;
+}
+.right-sidebar .modal{
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.right-sidebar .modal-content{
+    width: 200px;
+}
+.right-sidebar .modal-content .menu{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.right-sidebar .modal-content .close-btn{
+    padding: 4px;
+    font-size: large;
+    font-weight: bold;
+    color: crimson;
+    background-color: #fff;
+}
+/*---------------- Marks --------------*/
+.rotateX{
+    transform: rotateX(90deg);
+}
+.accord{
+    cursor: pointer;
+}
+.collapsed{
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: rgb(46 45 45 / 98%);
+    color: #fff;
+}
+/*---------------- notifications --------------*/
+.notifications-container{
+    position: relative ;
+}
+.notifications{
+    position: absolute;
+    width: 150px;
+    right: -50px;
+    top: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 05px #111;
+    border-radius: 0px 0px 4px 4px;
+    z-index: 11;
+    overflow-y: auto;
+    display:none ;
+
+}
+.notifications input[type="submit"]{
+    background-color: transparent;
+    border: transparent;
+    color: rgb(92, 92, 241);
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.notifications input[type="submit"]:hover{
+    color: rgba(92, 92, 241,0.5);
+}
+.notifications-content{
+    width: 100%;
+    background-color: rgb(171, 171, 245);
+    padding: 10px;
+    color: #fff;
+}
+
+/*---------------- Footer Page --------------*/
+footer{
+    display: block;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (min-width : 576px) {
+    
+    .modal-content{
+        width: 75%;
+    }
+    .personal-info{
+        width: 95%;
+    }
+    table td img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    /*---------------- Mini Sidebar Page --------------*/
+        .relative{
+            position: unset;
+        }
+        .mini-sidebar{
+            position: unset;
+        }
+        .mini-sidebar #toggleMiniSidebar{
+            display: none;
+            position: unset;
+        }
+        .mini-sidebar .nav{
+            position: unset ;
+            background: unset;
+            display: unset;
+        }
+        
+}
+@media screen and (min-width : 768px) {
+    *{
+        font-size: 16px;
+    }
+    a{
+        font-size: 15px;
+    }
+    .sidebar{
+        width: 23%;
+    }
+    .main-content{
+        width: 77%;
+        margin-left: 23%;
+    }
+    .user-img img{
+        width: 100px;
+        height: 100px;
+    }
+    .sidebar-toggle{
+        display: none;
+    }
+    .modal-content{
+        width: 55%;
+    }
+    .personal-info{
+        display: flex;
+        width: 90%;
+    }
+    .personal-info .image{
+        width: 40%;
+    }
+    .personal-info .info{
+         width: 60%;
+         padding: 8px 16px;
+     }
+     table td img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+}
+
+@media screen and (min-width : 992px) {
+    
+    a{
+        font-size: 16px;
+    }
+    .sidebar{
+        width: 25%;
+    }
+    .main-content{
+        width: 75%;
+        margin-left: 25%;
+    }
+    .sidebar-container{
+        padding: 15px 30px;
+    } 
+    .modal-content{
+        width: 45%;
+    }
+   .personal-info{
+       display: flex;
+       width: 80%;
+   }
+   .personal-info .image{
+       width: 40%;
+   }
+   .personal-info .info{
+        width: 60%;
+        padding: 8px 16px;
+    }
+    table td img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .exam-card .pile{
+        transform: scale(0);
+    }
+}
+

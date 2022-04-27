@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&family=Ubuntu:wght@300;400&display=swap');
+
+body{
+    font-family: 'Poppins' !important;
+    min-height: 100vh !important;
+    scroll-behavior: smooth !important;
+}
+:root{
+    --blue : #1a73e8 ;
+    --dark : rgba(0, 0, 0, 0.836) ;
+    --red : crimson
+}
+html{
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+/* ---------- General style ---------- */
+p{
+    font-size: 15px;
+}
+h4{
+    font-size: 18px !important;
+}
+.title{
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 26px ;
+}
+.title::after{
+    content: "";
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    height: 5px;
+    width: 80%;
+    background-color: crimson;
+}
+
+.btn-top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px #FFF;
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* ---------- Header style ---------- */
+  
+.social-media{
+    position: fixed ;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 0.5rem;
+    text-align: center;
+    z-index: 10;
+}
+.contact{
+    display: none;
+}
+/* ---------- Navbar style ---------- */
+.navbar{
+    background-color: rgba(210, 210, 210, 0.12);
+    z-index: 11;
+    transition: 0.5s;
+    padding: 0 !important;
+}
+
+.navbar-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-width: 0%;
+    background-color: #262525e0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+}
+.navbar-menu a{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.navbar-toggler{
+    display: block !important;
+}
+.navbar-menu .menu{
+    display: flex;
+    flex-direction: column;
+}
+.navbar .dropdown-menu{
+    display: block !important;
+    position: unset !important;
+    border: unset !important;
+    padding: unset !important;
+    margin: 5px ;
+    background-color: unset !important;
+    color:  #fff !important;
+    max-height: 0px ;
+    transition: 0.3s ;
+    overflow-y: hidden;
+    box-shadow: 0px 2px 2px #fffeee;
+}
+
+.navbar .dropdown-item{
+    color: unset !important;
+}
+.navbar .dropdown-item:hover{
+    background-color: #626262 !important;
+}
+
+/* ---------- slider style ---------- */
+.slider{
+    height: 70vh;
+    position: relative;
+}
+.slide img{
+    height: 70vh !important;
+}
+
+
+/* ---------- services style ---------- */
+.services{
+    background-image: url('/images/service.jpg') ;
+    background-size: cover;
+    background-attachment: fixed; 
+    position: relative;
+}
+.service{
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    transform: translateY(100px);
+    opacity: 0;
+}
+.service p{
+    padding: 0px 15px;
+}
+.service:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #fff;
+    transform: scale(1.2);
+}
+.services img{
+    width:110px ;
+    height: auto;
+}
+/* ---------- Contact style ---------- */
+.contact-us{
+    background:rgba(162, 225, 231, 0.986) ;
+    background-size: cover;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+.email{
+    width: 300px;
+    background-color: rgb(245, 238, 238);
+    border: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.36);
+    bottom: 5%;
+    animation: animate 15s linear infinite ;
+}
+
+/* ---------- events style ---------- */
+/* .events{
+    overflow-x: ;
+} */
+.event{
+    position: relative;
+    height: 30vh;
+    padding: 0 !important;
+    cursor: pointer;
+    margin: 2.5;
+}
+
+.event .event-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.event .event-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.event .event-body{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #a0afcc6e;
+    opacity: 1;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    transition: 00.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event .event-body:hover{
+    opacity: 1;
+}
+.event .event-footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: #ffffffb3;
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+}
+/* ---------- About event  style ---------- */
+.about-event {
+    margin:  15px 0px;
+}
+.about-event .img{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #fff;
+}
+.about-event .img img{
+    position: absolute ;
+    top: 0;
+    width: 60%;
+    height: 100%;
+}
+.about-event .h4{
+    padding: 10px 0px;
+    font-style: italic;
+    text-align: center;
+}
+.about-event small {
+    display: block;
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+}
+.about-event .description {
+    border: 1px grey solid;
+    border-top: 0;
+    border-bottom-width: 2px;
+    padding: 10px 20px;
+    border-radius: 0px 0px 3px 3px;
+    background-color: rgba(128, 128, 128, 0.04);
+
+}
+/* ---------- Partenariat style ---------- */
+.partenariats{
+    width: 100%; position: relative;
+}
+.partenariats .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #14171cd9;
+}
+.partenariat-content{
+    background: url('/images/Fotolia_128452201_Subscription_Monthly_M.jpg') fixed ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+}
+.partenariat{
+    transition: 0.5s;
+    display: flex;
+}
+.partenariat .item{
+    position: relative;
+    margin: 0px 10px;
+    transition: 0.5s ;
+}
+.partenariat .item:hover{
+    transform: scale(1.2);
+}
+.partenariat .item .img{
+    position: relative ;
+    width: 160px;
+    height: 160px ;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.partenariat .item .img img{
+    position: absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% ;
+}
+#next, #prev {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: black;
+    border: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+#next{
+    right: 0;
+}
+#prev{
+    left: 0;
+}
+#next:hover, #prev:hover {
+    opacity: 1;
+}
+/* ---------- Footer style ---------- */
+footer{
+    background-color: #113 !important;
+    text-align: center;
+}
+footer .about-us{
+    word-spacing: 0.2rem;
+    line-height: 1.5rem;
+}
+footer .google-map{
+    width: 300px ;
+    height: 200px ;
+    position: relative;
+}
+footer .google-map iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+footer .contact{
+    text-align: left;
+}
+@media screen and (min-width : 576px) {
+    .social-media{
+        position: unset ;
+        width: unset;
+        background: unset;
+        padding: unset;
+        text-align: unset;
+    }
+    .contact{
+        display: unset;
+    }
+  
+}
+@media screen and (min-width : 768px) {
+    .menu a {
+        color: rgb(207, 207, 226);
+    }
+    .event .event-body{
+        opacity: 0;
+    }
+   footer{
+       text-align: left;
+   }
+
+}
+
+@media screen and (min-width : 992px) {
+    .navbar-toggler{
+        display: none !important;
+    }
+    .navbar-menu{
+        position: unset;
+        height: unset;
+        max-width: unset;
+        background-color: unset;
+        overflow-x: unset;
+        padding-top: 0;
+    }
+    .navbar-menu .menu{
+        display: flex;
+        flex-direction: row !important;
+        padding: 1rem;
+    }
+    .navbar-menu .menu a{
+        color: #007bff;
+    }
+    .navbar .dropdown-menu{
+        display: unset !important;
+        position: absolute !important;
+        top: 58px;
+        border: unset !important;
+        padding: unset !important;
+        background-color: #fff !important;
+        box-shadow: 0px 10px 15px #111;
+    }
+    .navbar .dropdown-item{
+       color: rgb(44, 43, 43) !important;
+    }
+    .title::after{
+        content: "";
+        clear: both;
+        position: absolute;
+        bottom: 50%;
+        left: 24%;
+        height: 5px;
+        width: 80%;
+        background-color: crimson;
+    }
+}
